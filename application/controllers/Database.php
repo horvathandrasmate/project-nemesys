@@ -133,7 +133,7 @@ class Database extends CI_Controller
     function get_table_json($table_name, $converted = 0)
     {
         if ($table_name == "") {
-            alert_swal_error("Table not given", "account/admin");
+            alert_swal_error(lang("table_not_given"), "account/admin");
         }
         $this->load->helper("login");
         if (require_login()) {

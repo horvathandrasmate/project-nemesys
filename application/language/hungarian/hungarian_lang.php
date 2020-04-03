@@ -43,3 +43,4 @@ $lang["table_not_given"] = "Nincsen megadva tábla";
 $lang["table_not_found"] = "Nem találom a táblát";
 $lang["table_duplicate"] = "Duplikált tábla";
 $lang["denied_upload"] = "Elutasított feltöltés";
+$lang["table_not_given"] = "Nincsen megadva tábla";

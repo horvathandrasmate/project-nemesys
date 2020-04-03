@@ -43,3 +43,4 @@ $lang["table_not_given"] = "Table not given";
 $lang["table_not_found"] = "Table not found";
 $lang["table_duplicate"] = "Table duplicate";
 $lang["denied_upload"] = "Denied upload";
+$lang["table_not_given"] = "Table not given";

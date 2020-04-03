@@ -13,6 +13,9 @@ class Stock extends CI_Controller
         $this->load->model("Permissions_model");
     }
     public function index(){
-        
+        $this->load->view("templates/header");
+        $this->load->view("templates/menu");
+        $this->load->view("stock/index");
+        $this->load->view("templates/footer");
     }
 }

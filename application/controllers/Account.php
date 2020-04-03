@@ -126,7 +126,7 @@ class Account extends CI_Controller
     {
         $this->load->view("templates/header");
 
-        $this->load->view("account/menu");
+        $this->load->view("templates/menu");
         $this->load->view("templates/footer");
     }
 }

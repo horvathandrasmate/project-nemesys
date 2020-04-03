@@ -1,7 +1,7 @@
 <?php
 
 $lang["test"] = "HUNGARIAN";
-$lang["welcome_message"] = "Üdvözöl a ";
+$lang["welcome_message"] = "Üdvözöllek a ";
 $lang["login"] = "Bejelentkezés";
 $lang["remember_me"] = "Megjegyez";
 $lang["username"] = "Felhasználónév";
@@ -20,7 +20,7 @@ $lang["invalid_username"] = "Érvénytelen felhasználónév";
 $lang["invalid_nice_user_name"] = "Érvénytelen teljes név";
 $lang["invalid_email"] = "Érvénytelen e-mail cím";
 $lang["username_match"] = "A felhasználónév már használatban van";
-$lang["email_match"] = "Az e-mail cím már társítva van egy fiókhóz"; 
+$lang["email_match"] = "Az e-mail cím már társítva van egy fiókhóz";
 $lang["wrong_password"] = "Hibás jelszó";
 $lang["unknown_username"] = "Ismeretlen felhasználónév";
 $lang["successful_login"] = "Sikeres bejelentkezés";

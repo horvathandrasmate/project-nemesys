@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="<?php echo css_url('account/welcome.css') ?>">
 <div class="center">
     <h1>
-
+        
         <?php echo lang("welcome_message");?> <i><b><?php echo $this->config->item("project_title")?></b></i>
 
     </h1>

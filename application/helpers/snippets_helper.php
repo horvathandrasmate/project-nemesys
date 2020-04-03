@@ -251,10 +251,14 @@ function build_table($table_name)
     }
 
     .permission-add-alert-label {
-        float: left !important;
+        float: left !important; 
     }
 </style>';
         
+}
+function base_url_without_index($url){
+    $CI =& get_instance();
+    return $CI->config->item("base_url_without_index") . $url;
 }
 function nice_to_normal($str)
 {

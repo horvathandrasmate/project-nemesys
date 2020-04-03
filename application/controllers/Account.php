@@ -121,4 +121,9 @@ class Account extends CI_Controller
         $this->Account_model->logout();
         redirect(base_url("account/login"));
     }
+    function test(){
+        $this->load->view("templates/header");
+        $this->load->view("account/test");
+        $this->load->view("templates/footer");
+    }
 }

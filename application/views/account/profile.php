@@ -28,4 +28,6 @@ if(has_permission("add_user_to_ugroup")){
     echo form_close();
     echo "</div>";
 }
+
+$this->load->view("account/menu");
 ?>

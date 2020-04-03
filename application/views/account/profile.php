@@ -29,5 +29,5 @@ if(has_permission("add_user_to_ugroup")){
     echo "</div>";
 }
 
-$this->load->view("account/menu");
+
 ?>

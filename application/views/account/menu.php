@@ -40,6 +40,7 @@
             </a>
 
             <ul>
+                <!-- todo lang -->
                 <li><a href="#0" class="active"><span>Home</span></a></li>
                 <li><a href="#0"><span>Portfolio</span></a></li>
                 <li><a href="#0"><span>Services</span></a></li>

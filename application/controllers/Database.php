@@ -42,9 +42,9 @@ class Database extends CI_Controller
             try {
                 $this->Database_model->create_table($table_name, $array_of_inputs, $array_of_types);
             } catch (Exception $e) {
-                if($e->getMessage() === "unknown_type") alert_swal_error("Unknown type", "database/create_table");
-                if($e->getMessage() === "table_name_exists") alert_swal_error("Table name exists", "database/create_table");
-                if($e->getMessage() === "table_exists") alert_swal_error("Table exists", "database/create_table");
+                if($e->getMessage() === "unknown_type") alert_swal_error(lang("unknown_type"), "database/create_table");
+                if($e->getMessage() === "table_name_exists") alert_swal_error(lang("table_name_exists"), "database/create_table");
+                if($e->getMessage() === "table_exists") alert_swal_error(lang("table_exists"), "database/create_table");
             }
             redirect("database/");
         } else {
@@ -63,7 +63,7 @@ class Database extends CI_Controller
     function get_table($table_name = "")
     {
         if ($table_name == "") {
-            alert_swal_error("Table not given", "account/admin");
+            alert_swal_error(lang("table_not_given"), "account/admin");
         }
         $this->load->helper("login");
         if (require_login()) {
@@ -75,7 +75,7 @@ class Database extends CI_Controller
             try {
                 $this->load->view('database/table', array("data" => $data, "table_name" => $table_name));
             } catch (Exception $e) {
-                if ($e->getMessage() == "table_not_found") alert_swal_error("Table not found", "account/admin");
+                if ($e->getMessage() == "table_not_found") alert_swal_error(lang("table_not_found"), "account/admin");
             }
             $this->load->view('templates/footer');
         }
@@ -106,10 +106,10 @@ class Database extends CI_Controller
                         $this->Database_model->upload_row($this->config->item("table_prefix") . "tables", array("table_name" => $table_name, "table_nice_name" => $table_nice_name));
                         redirect(base_url("database/add_table"));
                     } else {
-                        alert_swal_error("Table Duplicate", "account/admin");
+                        alert_swal_error(lang("table_duplicate"), "account/admin");
                     }
                 } catch (Exception $e) {
-                    alert_swal_error("Denied upload", "account/admin");
+                    alert_swal_error(lang("denied_upload"), "account/admin");
                 }
 
 

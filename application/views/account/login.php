@@ -67,7 +67,7 @@
 <!--END OF LOGIN FORM-->
 <!-- REGISTER FORM-->
 <div class="limiter" id="register-form-whole">
-    <div class="container-login100" style="background-image: url('<?php echo img_url("login-bg.jpg") ?>');">
+    <div class="container-login100" style="background-image: url('<?php echo img_url("imagebckg-new.jpg") ?>');">
         <div class="wrap-login100">
             <form method="POSt" id="register-form" class="login100-form validate-form">
 

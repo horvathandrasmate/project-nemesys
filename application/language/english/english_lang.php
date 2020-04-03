@@ -26,6 +26,7 @@ $lang["unknown_username"] = "Unknown username";
 $lang["successful_login"] = "Login successful";
 $lang["successful_registration"] = "Registration successful";
 $lang["passwords_dont_match"] = "Passwords don't match";
+// Horvath
 $lang["edit"] = "Edit";
 $lang["delete"] = "Delete";
 $lang["insert"] = "Insert";
@@ -33,3 +34,12 @@ $lang["done"] = "Done";
 $lang["cancel"] = "Cancel";
 $lang["insert_row"] = "Insert Row";
 $lang["edit_row"] = "Edit Row";
+// Antoni
+$lang["successful_upload"] = "Upload was successful";
+$lang["unknown_type"] = "Unknown type";
+$lang["table_name_exists"] = "Table name exists";
+$lang["table_exists"] = "Table exists";
+$lang["table_not_given"] = "Table not given";
+$lang["table_not_found"] = "Table not found";
+$lang["table_duplicate"] = "Table duplicate";
+$lang["denied_upload"] = "Denied upload";

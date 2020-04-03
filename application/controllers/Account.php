@@ -37,7 +37,7 @@ class Account extends CI_Controller
             }
 
             if (!$error) {
-                alert_swal_success("Successful upload!");
+                alert_swal_success(lang("successful_upload"));
             }
         }
         if ($this->input->post('add_user_to_ugroup') !== NULL) {

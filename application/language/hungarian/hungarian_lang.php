@@ -26,6 +26,7 @@ $lang["unknown_username"] = "Ismeretlen felhasználónév";
 $lang["successful_login"] = "Sikeres bejelentkezés";
 $lang["successful_registration"] = "Sikeres regisztráció";
 $lang["passwords_dont_match"] = "A jelszavak nem egyeznek";
+// Horvath
 $lang["edit"] = "Szerkesztés";
 $lang["delete"] = "Törlés";
 $lang["insert"] = "Beillesztés";
@@ -33,5 +34,12 @@ $lang["done"] = "Kész";
 $lang["cancel"] = "Mégse";
 $lang["insert_row"] = "Sor Beillesztése";
 $lang["edit_row"] = "Sor Szerkesztése";
-
-
+// Antoni
+$lang["successful_upload"] = "A feltöltés sikeres volt";
+$lang["unknown_type"] = "Ismeretlen típus";
+$lang["table_name_exists"] = "Tábla név létezik";
+$lang["table_exists"] = "Tábla létezik";
+$lang["table_not_given"] = "Nincsen megadva tábla";
+$lang["table_not_found"] = "Nem találom a táblát";
+$lang["table_duplicate"] = "Duplikált tábla";
+$lang["denied_upload"] = "Elutasított feltöltés";

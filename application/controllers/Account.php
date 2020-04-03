@@ -52,6 +52,7 @@ class Account extends CI_Controller
         $groups = $this->Permissions_model->get_groups();
         $users = $this->Account_model->get_usernames();
         $this->load->view("templates/header");
+        $this->load->view("account/menu");
         $this->load->view("account/profile", array("user_data" => $data, "groups" => $groups, "users" => $users));
         $this->load->view("templates/footer");
     }
@@ -104,8 +105,8 @@ class Account extends CI_Controller
                 die();
             }
             if ($this->input->get("url") != NULL) {
-                
-                alert_swal_success(lang("successful_login"), urldecode($this->input->get("url")));    
+
+                alert_swal_success(lang("successful_login"), urldecode($this->input->get("url")));
             } else {
                 alert_swal_success(lang("successful_login"), "account/profile");
             }
@@ -121,8 +122,10 @@ class Account extends CI_Controller
         $this->Account_model->logout();
         redirect(base_url("account/login"));
     }
-    function menu(){
+    function menu()
+    {
         $this->load->view("templates/header");
+
         $this->load->view("account/menu");
         $this->load->view("templates/footer");
     }

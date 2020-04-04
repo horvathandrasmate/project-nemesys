@@ -56,7 +56,7 @@ class Account extends CI_Controller
         $users = $this->Account_model->get_usernames();
         $this->load->view("templates/header");
         $this->load->view("templates/menu");
-        $this->load->view("account/home", array("user_data" => $data, "groups" => $groups, "users" => $users));
+        $this->load->view("account/profile", array("user_data" => $data, "groups" => $groups, "users" => $users));
         $this->load->view("templates/footer");
     }
     public function index()
@@ -65,10 +65,18 @@ class Account extends CI_Controller
         $this->load->view("account/welcome");
         $this->load->view("templates/footer");
     }
+    function home(){
+        require_login();
+        $this->load->view("templates/header");
+        $this->load->view("templates/menu");
+        $nice_user_name = $this->Account_model->get_profile($this->session->userdata("username"))["nice_user_name"];
+        $this->load->view("account/home", array("data" => array("nice_user_name" => $nice_user_name)));
+        $this->load->view("templates/footer");
+    }
     function login()
     {
         if ($this->session->userdata("logged_in")) {
-            redirect(base_url("account/profile"));
+            redirect(base_url("account/home"));
         }
 
 

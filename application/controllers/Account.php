@@ -20,7 +20,7 @@ class Account extends CI_Controller
     function manage($table = "pn_permissions")
     {
         if ($this->session->userdata("logged_in")) {
-            redirect(base_url("account/profile"));
+            redirect(base_url("account/home"));
         }
         $this->load->view("templates/header");
         $this->load->view("account/manage", array("table" => $table));
@@ -55,8 +55,8 @@ class Account extends CI_Controller
         $groups = $this->Permissions_model->get_groups();
         $users = $this->Account_model->get_usernames();
         $this->load->view("templates/header");
-        $this->load->view("account/menu");
-        $this->load->view("account/profile", array("user_data" => $data, "groups" => $groups, "users" => $users));
+        $this->load->view("templates/menu");
+        $this->load->view("account/home", array("user_data" => $data, "groups" => $groups, "users" => $users));
         $this->load->view("templates/footer");
     }
     public function index()
@@ -111,7 +111,7 @@ class Account extends CI_Controller
 
                 alert_swal_success(lang("successful_login"), urldecode($this->input->get("url")));
             } else {
-                alert_swal_success(lang("successful_login"), "account/profile");
+                alert_swal_success(lang("successful_login"), "account/home");
             }
         } else {
 

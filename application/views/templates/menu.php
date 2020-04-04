@@ -41,9 +41,22 @@
 
             <ul>
                 <!-- todo lang -->
-                <li><a href="#0" class="active"><span>Home</span></a></li>
-                <li><a href="#0"><span>Portfolio</span></a></li>
-                <li><a href="#0"><span>Services</span></a></li>
+                <?php
+                $this->load->helper("url");
+                $profile = "";
+                $home = "";
+                $patient = "";
+                if(strpos(uri_string(current_url()), "patient/") || uri_string(current_url()) == "patient/"){
+                    $patient = "active";
+                }
+                if(strpos(uri_string(current_url()), "account/profile") || uri_string(current_url()) == "account/profile"){
+                    $profile = "active";
+                }
+                
+                ?>
+                <li><a href="#0" class="<?php echo $home;?>"><span>Home</span></a></li>
+                <li><a href="#0" class="<?php echo $profile;?>"><span>Profile</span></a></li>
+                <li><a href="#0" class="<?php echo $patient;?>"><span>Patient</span></a></li>
                 <li><a href="#0"><span>Store</span></a></li>
                 <li><a href="#0"><span>Contact</span></a></li>
             </ul>

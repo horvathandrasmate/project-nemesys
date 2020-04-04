@@ -18,14 +18,16 @@ class Database_model extends CI_Model
     }
 
     
-    function get_table($table_name)
+    function get_table($table_name, $select = array())
     {
         if (!$this->db->table_exists($table_name)) {
 
 
             throw new Exception("table_not_found");
         }
-
+        foreach($select as $key =>$value){
+            $this->db->select($value);
+        }
         $data = $this->db->get($table_name)->result_array();
         return $data;
     }

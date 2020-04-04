@@ -16,8 +16,35 @@
             <p class="class"><strong>Osztály:</strong> BARNA??????,</p>
         </div>
         <div class="scrollable-div">
+            Kórlap:
             <p class="scrollable-p">
-                
+                <?php 
+                if(isset($data["active_case"]["anamnezis"])){
+                    ?>
+                    Anamnézis : 
+                    <?php
+                    echo $data["active_case"]["anamnezis"];
+                }
+                ?>
+                <br>
+                <?php 
+                if(isset($data["active_case"]["epikrizis"])){
+                    ?>
+                    Epikrízis : 
+                    <?php
+                    echo $data["active_case"]["epikrizis"];
+                }
+                ?>
+                <br>
+                <?php 
+                if(isset($data["active_case"]["dekurzus"])){
+                    ?>
+                    Dekurzus : 
+                    <?php
+                    echo $data["active_case"]["dekurzus"];
+                }
+                ?>
+
             </p>
         </div>
     </div>

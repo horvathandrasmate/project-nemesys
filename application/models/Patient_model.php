@@ -5,10 +5,14 @@ if (!defined('BASEPATH')) exit('Direct access allowed');
 class Patient_model extends CI_Model
 {
     static public $PATIENT_TABLE = "patients";
+    static public $ESETEK_TABLE = "esetek";
+    static public $STATUSOK_TABLE = "statusok";
     function __construct()
     {
         parent::__construct();
         self::$PATIENT_TABLE = $this->config->item("table_prefix") . self::$PATIENT_TABLE;
+        self::$ESETEK_TABLE = $this->config->item("table_prefix") . self::$ESETEK_TABLE;
+        self::$STATUSOK_TABLE = $this->config->item("table_prefix") . self::$STATUSOK_TABLE;
         
     }
     function get_patient_table($select = array()){
@@ -34,6 +38,17 @@ class Patient_model extends CI_Model
     }
     function get_patient($user_id){
         return get_x_by_y("*", "id", $user_id, self::$PATIENT_TABLE);
+    }
+    function get_active_case($id){
+
+        $data = get_x_by_y("*", "paciens_id", $id, self::$ESETEK_TABLE);
+        foreach($data as $key => $value){ 
+            if($data[$key]["statusofcase"] == get_x_by_y("id", "nice_name", "aktív", self::$STATUSOK_TABLE)){
+                var_dump($data[$key]);
+                return $data[$key];  
+            }
+        }
+        return array();
     }
 
 }

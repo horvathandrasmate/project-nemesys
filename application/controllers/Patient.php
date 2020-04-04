@@ -32,9 +32,10 @@ class Patient extends CI_Controller
             alert_swal_error("Invalid User Id","patient/index");
         }else{
             $patient_data = $this->Patient_model->get_patient($user_id);
+            $active_case = $this->Patient_model->get_active_case($user_id);
             $this->load->view("templates/header");
             $this->load->view("templates/menu");
-            $this->load->view("patient/medrecord", array("data" => array("user_data" => $patient_data)));
+            $this->load->view("patient/medrecord", array("data" => array("user_data" => $patient_data, "active_case" => $active_case)));
             $this->load->view("templates/footer");   
         }
     }

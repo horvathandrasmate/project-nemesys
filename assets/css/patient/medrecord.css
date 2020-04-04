@@ -1,0 +1,76 @@
+.main-container {
+	transition: 0.3s;
+	margin-top: 3vmin !important;
+	margin-bottom: 3vmin;
+	border-radius: 2px;
+	border: 1px;
+	margin-left: 1vmin auto;
+	margin-right: 1vmin auto;
+	min-height: 93%;
+	min-width: 80% !important;
+}
+.main-h1 {
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	/* font-weight: bold; */
+	font-size: 5vmin !important;
+	padding: 4vmin;
+	padding-bottom: 0.5vmin !important;
+}
+.main-h1-a {
+	text-decoration: none;
+    color: black !important;
+}
+.main-h1-a:hover {
+    text-decoration: underline;
+} 
+.main-hr {
+	border: 0.5px solid lightgray;
+	margin-left: 4vmin;
+	margin-right: 4vmin;
+	margin-bottom: 5vmin;
+}
+.main-div {
+	margin-left: 5vmin;
+	margin-right: 5vmin;
+}
+.name {
+	color: black;
+    font-size: 3.6vmin;
+    display: block;
+}
+hr.name-hr {
+	border-top: 1px dotted lightgray;
+	margin-bottom: 3vmin;
+}
+.left {
+    float: left;
+
+}
+.right {
+    float: right;
+}
+.born-date, .taj, .born-city, .mothers-name, .id, .karszalagszam, .class {
+    color: black;
+    font-size: 3vmin;
+    margin: 0.5vmin;
+}
+strong {
+    font-weight: bold;
+}
+.scrollable-div {
+    margin-top: 20vmin;
+    background-color: lightgray;
+    border: 0.2px solid gray;
+    min-height: 51%;
+    max-height: 51%;
+    overflow-y: auto;
+    min-width: 80vmin;    
+}
+.scrollable-p {
+    color: black;
+    padding: 1vmin;
+    line-break: normal;
+    font-size: 3vmin;
+
+}

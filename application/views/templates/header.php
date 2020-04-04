@@ -8,6 +8,13 @@
     </title>
 
     <link rel="stylesheet" href="<?php echo css_url("bootstrap.min.css")?>" integrity="anonymous" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo css_url("jquery.dataTables.min.css")?>" >
+    <link rel="stylesheet" href="<?php echo css_url("jquery-ui.css")?>" >
+    <link rel="stylesheet" href="<?php echo css_url("dataTables.jqueryui.min.css")?>" >
+    <link rel="stylesheet" href="<?php echo css_url("scroller.jqueryui.min.css")?>" >
+    <link rel="stylesheet" href="<?php echo css_url("dataTables.bootstrap.min.css")?>" >
+    <link rel="stylesheet" href="<?php echo css_url("fixedColumns.jqueryui.min.css")?>" >
+    <link rel="stylesheet" href="<?php echo css_url("datatables.min.css")?>" >
 
     <link
             href="<?php echo css_url("fonts.css")?>"
@@ -36,10 +43,12 @@
     <script src="<?php echo js_url("Chart.min.js")?>"></script>
     <script src="<?php echo js_url("jquery.dataTables.min.js")?>"></script>
     <script src="<?php echo js_url("dataTables.bootstrap4.min.js")?>"></script>
+    <script src="<?php echo js_url("datatables.min.js")?>"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="<?php echo js_url("sb-admin.js")?>"></script>
-
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 
 
 </head>

@@ -40,5 +40,5 @@ body {
 .main-table {
     padding: 4vmin;
     overflow-x: auto;
-    min-width: 600px;
+    /* min-width: 600px; */
 }

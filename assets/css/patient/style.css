@@ -70,3 +70,14 @@ body {
 	-webkit-box-shadow: 2px 2px 2px 0 rgba(0,255,59,1) inset;
 	box-shadow: 2px 2px 2px 0 rgba(0,255,59,1) inset;
   }
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.data{
+	width:100%;
+	font-family: Consolas, Arial,sans-serif;
+	font-size:20px;
+}

@@ -15,7 +15,7 @@
                 ],
                 "bPaginate": false,
                 "sScrollX": "110%",
-                "sScrollY": "200px",
+                "sScrollY": "400px",
                 "bScrollCollapse": true,
                 
                 "bFilter": true,
@@ -50,7 +50,7 @@
 
                         <?php
                         foreach ($db as $x => $valuex) {
-                            echo "<tr>";
+                            echo "<tr onclick='window.location.href = \"".base_url("patient/medrecord/". $db[$x]['id'])."\"'>";
                             foreach ($valuex as $y => $valuey) {
                                 echo "<td style='white-space:nowarp'>";
                                 echo $valuey;

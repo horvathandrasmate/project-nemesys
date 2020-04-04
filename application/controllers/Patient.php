@@ -27,6 +27,16 @@ class Patient extends CI_Controller
 
         $this->Patient_model->create_random_patient($number);
     }
+    function medrecord($user_id = -1){
+        if($user_id == -1){
+            alert_swal_error("Invalid User Id","patient/index");
+        }else{
+            $this->load->view("templates/header");
+            $this->load->view("templates/menu");
+            $this->load->view("patient/medrecord");
+            $this->load->view("templates/footer");   
+        }
+    }
 
 
 }

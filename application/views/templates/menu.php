@@ -14,7 +14,13 @@
 </head>
 <style>
     li span{
-        color:black;
+        color:white;
+        background-color: black;
+        padding:15px;
+        padding-top:0;
+        padding-bottom:0;
+        margin:0;
+        border-radius: 10px;
     }
     .cd-stretchy-nav ul a::after {
         background: url(<?php echo img_url("menu/cd-sprite-1.svg") ?>) no-repeat 0 0;
@@ -59,9 +65,9 @@
 
                 
                 ?>
-                <li ><a href="<?php echo base_url("account/home");?>" class="<?php echo $home;?>"><span >Home</span></a></li>
+                <li ><a href="<?php echo base_url("account/home");?>" class="<?php echo $home;?>"><span>Home</span></a></li>
                 <li><a href="<?php echo base_url("patient/index");?>" class="<?php echo $patient;?>"><span>Patient</span><i class="fa fa-user-injury"></i></a></li>
-                <li><a href="<?php echo base_url("account/logout");?>" class="<?php echo $patient;?>"><span>Logout</span></a></li>
+                <li><a href="<?php echo base_url("account/logout");?>"><span>Logout</span></a></li>
             </ul>
 
             <span aria-hidden="true" class="stretchy-nav-bg"></span>

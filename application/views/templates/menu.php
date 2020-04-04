@@ -49,13 +49,12 @@
                 if(strpos(uri_string(current_url()), "patient/") || uri_string(current_url()) == "patient/"){
                     $patient = "active";
                 }
-                if(strpos(uri_string(current_url()), "account/profile") || uri_string(current_url()) == "account/profile"){
-                    $profile = "active";
+                if(strpos(uri_string(current_url()), "account/home") || uri_string(current_url()) == "account/home"){
+                    $home = "active";
                 }
                 
                 ?>
                 <li><a href="#0" class="<?php echo $home;?>"><span>Home</span></a></li>
-                <li><a href="#0" class="<?php echo $profile;?>"><span>Profile</span></a></li>
                 <li><a href="#0" class="<?php echo $patient;?>"><span>Patient</span></a></li>
                 <li><a href="#0"><span>Store</span></a></li>
                 <li><a href="#0"><span>Contact</span></a></li>

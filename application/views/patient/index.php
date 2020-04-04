@@ -19,6 +19,7 @@
     "bInfo": false,
     "bAutoWidth": false
             });
+            $('.dataTables_filter').addClass('filter-css');
         });
     </script>
 </head>

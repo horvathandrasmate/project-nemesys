@@ -21,7 +21,7 @@ function build_table($table_name)
     echo '<button type="button" onclick="add_row()" class="btn btn-success">'.lang("insert").'</button>';
     echo '<button type="button" onclick="convert_data()" class="btn btn-success">Change data</button>';
     
-    echo " <table id=\"table-container\" class=\"table-dark px-4 py-4 table-striped table table-active\">
+    echo " <table id=\"table-container\" class=\"table px-4 py-4 table table-active\">
             <thead>
             <tr>";
     foreach ($table_columns as $key => $value) {

@@ -19,7 +19,7 @@ class Account extends CI_Controller
     }
     function manage($table = "pn_permissions")
     {
-        if ($this->session->userdata("logged_in")) {
+        if (!$this->session->userdata("logged_in")) {
             redirect(base_url("account/home"));
         }
         $this->load->view("templates/header");

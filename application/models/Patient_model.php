@@ -32,5 +32,8 @@ class Patient_model extends CI_Model
             $this->db->insert(self::$PATIENT_TABLE, array("name" => $name, "tajszam" => $tajszam, "DOB" => $randomDate, "mother_name" => $anyja_neve,"legkozelebbi_hozzatartozo" => $legkozelebbi_hozzatartozo, "lh_telefonszam" => $telefonszam, "korhazi_id" =>$korhazi_id, "karszalag_id" =>$karszalag_id));
         }
     }
+    function get_patient($user_id){
+        return get_x_by_y("*", "id", $user_id, self::$PATIENT_TABLE);
+    }
 
 }

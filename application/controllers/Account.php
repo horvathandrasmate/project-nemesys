@@ -19,15 +19,14 @@ class Account extends CI_Controller
     }
     function manage($table = "pn_permissions")
     {
-        if (!$this->session->userdata("logged_in")) {
-            redirect(base_url("account/home"));
-        }
+        require_login();
         $this->load->view("templates/header");
         $this->load->view("account/manage", array("table" => $table));
         $this->load->view("templates/footer");
     }
     public function profile()
     {
+        require_login();
         if ($this->input->post('upload_permission') !== NULL) {
             $permission_name = $this->input->post('permission_name');
             //$this->Permissions_model->test();
@@ -130,13 +129,14 @@ class Account extends CI_Controller
     }
     function logout()
     {
+        require_login();
         $this->Account_model->logout();
         redirect(base_url("account/login"));
     }
     function menu()
     {
+        require_login();
         $this->load->view("templates/header");
-
         $this->load->view("templates/menu");
         $this->load->view("templates/footer");
     }

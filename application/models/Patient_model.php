@@ -44,7 +44,6 @@ class Patient_model extends CI_Model
         $data = get_x_by_y("*", "paciens_id", $id, self::$ESETEK_TABLE);
         foreach($data as $key => $value){ 
             if($data[$key]["statusofcase"] == get_x_by_y("id", "nice_name", "aktív", self::$STATUSOK_TABLE)){
-                var_dump($data[$key]);
                 return $data[$key];  
             }
         }

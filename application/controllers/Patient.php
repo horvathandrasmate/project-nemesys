@@ -17,6 +17,7 @@ class Patient extends CI_Controller
         $this->load->model("Patient_model");
     }
     function index() {
+        require_login();
         $db = $this->Patient_model->get_patient_table(array("id","name", "tajszam", "DOB"));
         $this->load->view("templates/header");
         $this->load->view("templates/menu");
@@ -24,10 +25,12 @@ class Patient extends CI_Controller
         $this->load->view("templates/footer");
     }
     function create_patients($number = 1){
-
+        require_login();
+        $number = 0;
         $this->Patient_model->create_random_patient($number);
     }
     function medrecord($user_id = -1){
+        require_login();
         if($user_id == -1){
             alert_swal_error("Invalid User Id","patient/index");
         }else{

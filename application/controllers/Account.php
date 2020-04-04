@@ -17,8 +17,11 @@ class Account extends CI_Controller
         $this->load->model("Account_model");
         $this->load->model("Permissions_model");
     }
-    function manage($table = "pm_permissions")
+    function manage($table = "pn_permissions")
     {
+        if ($this->session->userdata("logged_in")) {
+            redirect(base_url("account/profile"));
+        }
         $this->load->view("templates/header");
         $this->load->view("account/manage", array("table" => $table));
         $this->load->view("templates/footer");
@@ -64,9 +67,9 @@ class Account extends CI_Controller
     }
     function login()
     {
-        /*if ($this->session->userdata("logged_in")) {
+        if ($this->session->userdata("logged_in")) {
             redirect(base_url("account/profile"));
-        }*/
+        }
 
 
         if (NULL !== $this->input->post('register')) {

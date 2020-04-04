@@ -56,7 +56,7 @@ hr.name-hr {
     margin: 0.5vmin;
 }
 strong {
-    font-weight: bold;
+    font-weight: 550;
 }
 .scrollable-div {
     margin-top: 20vmin;
@@ -69,8 +69,21 @@ strong {
 }
 .scrollable-p {
     color: black;
-    padding: 1vmin;
+    padding: 2vmin;
     line-break: normal;
     font-size: 3vmin;
+    padding-bottom: 1vmin !important;
 
+}
+.scrollable-h1 {
+    color: black;
+    padding: 1vmin;
+    font-size: 4vmin;
+
+}
+.scrollable-inner-p {
+    color: black;
+    padding-left: 3vmin;
+    font-size: 2vmin;
+    line-break: normal;
 }

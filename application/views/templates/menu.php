@@ -13,15 +13,29 @@
     <title>Stretchy Navigation | CodyHouse</title>
 </head>
 <style>
-    li span{
-        color:white;
+    li span {
+        color: white;
         background-color: black;
-        padding:15px;
-        padding-top:0;
-        padding-bottom:0;
-        margin:0;
-        border-radius: 10px;
+        padding: 15px;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 0;
+        border-radius: 900px;
+
     }
+    .home,.patient,.logout {
+        opacity: .9;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    .home :hover,.patient :hover,.logout :hover {
+        /* opacity: .9; */
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
     .cd-stretchy-nav ul a::after {
         background: url(<?php echo img_url("menu/cd-sprite-1.svg") ?>) no-repeat 0 0;
     }
@@ -40,11 +54,12 @@
 
     }
 </style>
+
 <body>
     <header>
         <nav class="cd-stretchy-nav">
             <a class="cd-nav-trigger" href="#0">
-                
+
                 <span aria-hidden="true"></span>
             </a>
 
@@ -55,19 +70,19 @@
                 $profile = "";
                 $home = "";
                 $patient = "";
-                console_log("'".uri_string(current_url())."'");
-                if(strpos(uri_string(current_url()), "patient/index") || uri_string(current_url()) == "patient/index"){
+                console_log("'" . uri_string(current_url()) . "'");
+                if (strpos(uri_string(current_url()), "patient/index") || uri_string(current_url()) == "patient/index") {
                     $patient = "active";
                 }
-                if(strpos(uri_string(current_url()), "account/home") || uri_string(current_url()) == "account/home"){
+                if (strpos(uri_string(current_url()), "account/home") || uri_string(current_url()) == "account/home") {
                     $home = "active";
-                } 
+                }
 
-                
+
                 ?>
-                <li ><a href="<?php echo base_url("account/home");?>" class="<?php echo $home;?>"><span>Home</span></a></li>
-                <li><a href="<?php echo base_url("patient/index");?>" class="<?php echo $patient;?>"><span>Patient</span><i class="fa fa-user-injury"></i></a></li>
-                <li><a href="<?php echo base_url("account/logout");?>"><span>Logout</span></a></li>
+                <li><a href="<?php echo base_url("account/home"); ?>" class="<?php echo $home; ?>, home"><span>Home</span></a></li>
+                <li><a href="<?php echo base_url("patient/index"); ?>" class="<?php echo $patient; ?>, patient"><span>Patient</span><i class="fa fa-user-injury"></i></a></li>
+                <li><a href="<?php echo base_url("account/logout"); ?>" class="logout"><span>Logout</span></a></li>
             </ul>
 
             <span aria-hidden="true" class="stretchy-nav-bg"></span>

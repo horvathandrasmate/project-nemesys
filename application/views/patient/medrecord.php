@@ -1,3 +1,14 @@
+<head>
+    <script>
+        function sentfortest() {
+            Swal.fire({
+                icon: 'success',
+                title: 'Teszt kérelem elküldve',
+                text: '',
+            })
+        }
+    </script>
+</head>
 <link rel="stylesheet" href="<?php echo css_url("patient/medrecord.css") ?>">
 <div class="container main-container">
     <h1 class="main-h1"><a href="../" class="main-h1-a">Páciens</a> </h1>
@@ -14,7 +25,10 @@
             <p class="id"><strong>ID:</strong> <?php echo $data["user_data"][0]["id"] ?> </p>
             <p class="karszalagszam"><strong>Karszalagszám:</strong> <?php echo $data["user_data"][0]["karszalag_id"] ?></p>
             <!-- <p class="class"><strong>Osztály:</strong> BARNA??????,</p> -->
-            <button class="btn btn-danger" style="font-size: 2vmin; margin-top: 1vmin; border-radius:5px;">Send For COVID-19 Test</button>
+            <form action="POST">
+                <input type="button" class="btn btn-danger" style="font-size: 2vmin; margin-top: 1vmin; border-radius:5px;" onclick="sentfortest()" value="Send For COVID-19 Test"></input>
+            </form>
+
         </div>
         <div class="scrollable-div">
             <h1 class="scrollable-h1">Kórlap:</h1>
@@ -22,7 +36,7 @@
                 <?php
                 if (isset($data["active_case"]["anamnezis"])) {
                 ?>
-                    <strong>Anamnézis :</strong> 
+                    <strong>Anamnézis :</strong>
                     <div>
                         <p class="scrollable-inner-p"><?php
                                                         echo $data["active_case"]["anamnezis"]; ?></p>
@@ -33,7 +47,7 @@
                 <?php
                 if (isset($data["active_case"]["epikrizis"])) {
                 ?>
-                    <p class="scrollable-p"><strong>Epikrízis :</strong></p> 
+                    <p class="scrollable-p"><strong>Epikrízis :</strong></p>
                     <div>
                         <p class="scrollable-inner-p"><?php
                                                         echo $data["active_case"]["epikrizis"]; ?></p>

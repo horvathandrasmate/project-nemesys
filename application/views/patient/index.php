@@ -35,6 +35,7 @@
         <div class="container main-container">
             <h1 class="main-h1">Páciensek</h1>
             <hr class="main-hr">
+            <p class="main-help">(A nevek kattinthatóak további információért)</p> 
             <div class="main-table">
                 <table id="table-container" style="max-width: none !important; width: 100%" class="table table-striped table-bordered" cellspacing="0">
                     <thead>

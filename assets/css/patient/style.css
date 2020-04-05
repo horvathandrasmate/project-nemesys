@@ -81,3 +81,10 @@ body {
 	font-family: Consolas, Arial,sans-serif;
 	font-size:20px;
 }
+.main-help {
+	margin-left: 4vmin;
+	color: grey;
+	font-family: Consolas, Arial,sans-serif;
+	font-style: italic;
+
+}
